@@ -40,7 +40,7 @@ class Dragon:
     dragon_velocity = 10
 
     def __init__(self):
-        self.witch_img = pygame.image.load('dragon.png')
+        self.witch_img = pygame.image.load('witch.png')
         self.witch_img_rect = self.witch_img.get_rect()
         self.witch_img_rect.width -= 10
         self.witch_img_rect.height -= 10
@@ -86,7 +86,7 @@ class Mario:
     velocity = 10
 
     def __init__(self):
-        self.spooky_img = pygame.image.load('maryo.png')
+        self.spooky_img = pygame.image.load('spooky.png')
         self.spooky_img_rect = self.spooky_img.get_rect()
         self.spooky_img_rect.left = 20
         self.spooky_img_rect.top = WINDOW_HEIGHT/2 - 100
@@ -111,7 +111,7 @@ class Mario:
 
 def game_over():
     pygame.mixer.music.stop()
-    music = pygame.mixer.Sound('mario_dies.wav')
+    music = pygame.mixer.Sound('dies.wav')
     music.play()
     topscore.top_score(SCORE)
     game_over_img = pygame.image.load('end.png')
@@ -185,7 +185,7 @@ def game_loop():
         SCORE = 0
         global  HIGH_SCORE
         flames_list = []
-        pygame.mixer.music.load('mario_theme.wav')
+        pygame.mixer.music.load('theme.wav')
         pygame.mixer.music.play(-1, 0.0)
         while True:
             canvas.fill(BLACK)
